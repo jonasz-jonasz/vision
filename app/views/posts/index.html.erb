@@ -1,0 +1,35 @@
+<div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700 mx-auto">
+  <% if notice.present? %>
+    <div class="mb-5 p-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200" role="alert" id="notice"><%= notice %></div>
+  <% end %>
+
+  <% content_for :title, "Posts" %>
+
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="font-bold text-3xl text-gray-900 dark:text-white">Posts</h1>
+    <%= link_to "New post", new_post_path, class: "rounded-lg py-2.5 px-5 bg-blue-600 text-white font-medium hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800" %>
+  </div>
+
+  <div id="posts" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <% @posts.each do |post| %>
+      <div class="bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-700 dark:border-gray-600 p-4 flex flex-col">
+        <!-- Obraz posta (miniaturka) -->
+        <% if post.image.attached? %>
+          <div class="mb-4">
+            <%= image_tag post.image.variant(resize_to_limit: [300, 300]).processed, class: "rounded-lg shadow-sm w-full h-48 object-cover" %>
+          </div>
+        <% end %>
+
+        <!-- Tytuł posta -->
+        <h2 class="text-lg font-medium text-gray-900 dark:text-white mb-2"><%= post.title %></h2>
+
+        <!-- Opis posta (skrócony) -->
+        <p class="text-sm text-gray-700 dark:text-gray-300 mb-4"><%= truncate(post.description, length: 100) %></p>
+
+        <div class="mt-auto">
+          <%= link_to "Show this post", post, class: "w-full block text-center rounded-lg py-2.5 px-5 bg-gray-200 text-gray-700 font-medium hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

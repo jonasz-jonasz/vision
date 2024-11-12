@@ -1,0 +1,51 @@
+<div class="container mx-auto px-4 py-8 bg-[#D1D5DB] dark:bg-gray-800 dark:text-white">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-bold mb-4">About Us</h1>
+    <p class="text-lg text-gray-700 dark:text-gray-300">Learn more about what we do.</p>
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="bg-[#9CA3AF] dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-2">Our Mission</h2>
+        <p class="text-gray-800 dark:text-gray-300">To provide the best services to our clients and ensure utmost satisfaction.</p>
+      </div>
+      <div class="bg-[#9CA3AF] dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-2">Our Vision</h2>
+        <p class="text-gray-800 dark:text-gray-300">To be the leading provider in our industry with innovative solutions.</p>
+      </div>
+    </div>
+
+    <!-- Timeline section -->
+    <div class="timeline flex flex-col mb-8">
+      <div class="timeline-item flex">
+        <div class="timeline-marker bg-blue-600"></div>
+        <div class="timeline-content bg-[#9CA3AF] dark:bg-gray-700 rounded-lg p-4 shadow-lg ml-4">
+          <h3 class="font-bold text-xl mb-2">2020</h3>
+          <p class="text-gray-800 dark:text-gray-300">Our company was founded with the goal of providing exceptional services to our customers.</p>
+        </div>
+      </div>
+      <div class="timeline-item flex mt-4">
+        <div class="timeline-marker bg-blue-600"></div>
+        <div class="timeline-content bg-[#9CA3AF] dark:bg-gray-700 rounded-lg p-4 shadow-lg ml-4">
+          <h3 class="font-bold text-xl mb-2">2021</h3>
+          <p class="text-gray-800 dark:text-gray-300">We expanded our services to include new and innovative solutions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="bg-[#9CA3AF] dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-2">Our Values</h2>
+        <p class="text-gray-800 dark:text-gray-300">Integrity, Excellence, and Innovation are at the core of our values.</p>
+      </div>
+      <div class="bg-[#9CA3AF] dark:bg-gray-700 p-6 rounded-lg shadow-lg flex items-center justify-center">
+        <%= image_tag "avatar.png", alt: "Company logo", class: "w-24 h-24 rounded-full border-2 border-white" %>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md">Contact Us</a>
+    </div>
+  </div>
+</div>
